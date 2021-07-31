@@ -1,12 +1,29 @@
-<h1>Students List</h1>
+
 <div>
-<!--  <form>
+
+  <form>
+    <input type="number" name="id" [(ngModel)]="id" />
+
+    <input type="submit" (click)="deleteStudent()">
+  </form>
+  <div>
+    <h3><b>{{newStudent.firstName }}  |  {{newStudent.lastName}}  |  {{newStudent.batch}}  </b></h3>
+
+  </div>
+
+
+  <h1>Students List</h1>
+  <div *ngFor="let singleStudent of studentsList" >
+    <h3><b>{{singleStudent.firstName }}  |  {{singleStudent.lastName}}  |  {{singleStudent.batch}}  </b></h3>
+  </div>
+  <br/>
+  <br/>
+  <form>
     <input type="text" name="firstName" [(ngModel)]="newStudent.firstName" />
     <input type="text" name="lastName" [(ngModel)]="newStudent.lastName" />
     <input type="text" name="batch" [(ngModel)]="newStudent.batch" />
     <input type="submit" (click)="addStudent()">
-
-  </form>-->
+  </form>
 
 </div>
 
